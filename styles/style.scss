@@ -5,6 +5,7 @@
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    // overflow: hidden;
 }
 
 // Header section 
@@ -85,7 +86,7 @@ header.fixed{
     align-items: center;
     justify-content: center;
     padding: 10rem;
-    background-image: url(/Iyanda_Olamidotun/images/background.jpg);
+    background-image: url(./background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     .home-con{
@@ -174,6 +175,7 @@ header.fixed{
         .info{
             width: 50%;
             text-transform: capitalize;
+            text-align: justify;
             .info-title{
                 font-size: 2rem;
                 text-transform: uppercase;
@@ -296,6 +298,10 @@ header.fixed{
 .portfolio{
     background-color: wheat;
     padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     .title-con{
         position: relative;
         .title{
@@ -339,13 +345,13 @@ header.fixed{
     }
     .container{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         justify-content: center;
-
+        gap: 50px;
         .project-con{
             margin-top: 2.5rem;
-            width: 350px;
-            height: 400px;
+            width: 450px;
+            height: 450px;
             // border: 1px solid black;
             border-radius: 10px;
             display: flex;
@@ -422,6 +428,7 @@ header.fixed{
         justify-content: center;
         // align-items: center;
         padding-top: 5rem;
+        gap: 100px;
         .contact-details{
             max-width: 500px;
             .title{
@@ -452,27 +459,49 @@ header.fixed{
             display: flex;
             flex-direction: column;
             padding: 0 50px;
-           .name{
-                width: 600px;
-                height: 50px;
-                border-radius: 30px;
-                background-color: rgb(5, 133, 5);
-                border: 1px solid black;
-                margin-top: 20px;
-                input{
-                    width: 100%;
-                    height: 100%;
-                    background-color: transparent;
-                    border: 0;
-                    padding: 0 20px;
-                    outline: none;
-                    font-size: 1rem;
-                    color: white;
+           .fullName{
+            display: flex;
+            gap: 20px;
+                .firstName{
+                    width: 250px;
+                    height: 40px;
+                    border-radius: 30px;
+                    background-color: rgb(5, 133, 5);
+                    border: 1px solid black;
+                    margin-top: 20px;
+                    input{
+                        width: 100%;
+                        height: 100%;
+                        background-color: transparent;
+                        border: 0;
+                        padding: 0 20px;
+                        outline: none;
+                        font-size: 1rem;
+                        color: white;
+                    }
+                }
+                .lastname{
+                    width: 250px;
+                    height: 40px;
+                    border-radius: 30px;
+                    background-color: rgb(5, 133, 5);
+                    border: 1px solid black;
+                    margin-top: 20px;
+                    input{
+                        width: 100%;
+                        height: 100%;
+                        background-color: transparent;
+                        border: 0;
+                        padding: 0 20px;
+                        outline: none;
+                        font-size: 1rem;
+                        color: white;
+                    }
                 }
            }
            .email{
-                width: 600px;
-                height: 50px;
+                width: 520px;
+                height: 40px;
                 border-radius: 30px;
                 background-color: rgb(5, 133, 5);
                 border: 1px solid black;
@@ -489,8 +518,8 @@ header.fixed{
                 }
             }
            .subject{
-                width: 600px;
-                height: 50px;
+                width: 520px;
+                height: 40px;
                 border-radius: 30px;
                 background-color: rgb(5, 133, 5);
                 border: 1px solid black;
@@ -507,8 +536,8 @@ header.fixed{
                 }
             }
            .message{
-                width: 600px;
-                height: 250px;
+                width: 520px;
+                height: 200px;
                 border-radius: 20px;
                 background-color: rgb(5, 133, 5);
                 border: 1px solid black;
@@ -524,6 +553,10 @@ header.fixed{
                     color: white;
                 }
             }
+            .submit-btn{
+                margin-top: 50px;
+                font-size: 1rem;
+            }
         }
     }
 }
@@ -538,21 +571,26 @@ header.fixed{
 }
 // Mobile responsiveness
 
-@media (max-width: 600px) {
-  header{
-    .logo-box{
-        h1{
-            font-size: 1rem !important;
+@media (max-width: 1500px){
+    .about-con{
+        padding: 5rem 5rem !important;
+    }
+    .portfolio{
+        .container{
+            grid-template-columns: 1fr 1fr !important;
         }
     }
-  }
 }
 
-
-
-@media (max-width: 1100px){
+@media (max-width: 1200px){
     header{
+        width: 100% !important;
         padding: 0 2rem;
+        .logo-box{
+            h1{
+                font-size: 1.2rem;
+            }
+        }
         .nav-list{
             display: block;
             position: fixed;
@@ -621,10 +659,219 @@ header.fixed{
     }
 
     // home
-
+    .home{
+        .home-con{
+            .text-con{
+                .heading1{
+                    font-size: 1.5rem;
+                }
+                .heading2{
+                    font-size: 3rem;
+                }
+                .heading3{
+                    font-size: 1.2rem;
+                }
+                .heading4{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
     // about
+    .about-con{
+        padding: 5rem 0 !important;
+        .info-con{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .info{
+                width: 100%;
+                padding: 5rem !important;
+            }
+        }
+        .projects{
+            padding-left: 0 !important;
+            margin-top: 30px;
+        }
+        .skills-con{
+            .skills{
+               display: flex !important;
+               flex-direction: column;
+               align-items: center;
+               justify-content: center;
+            }
+        }
+    }
 
+    // Portfolio
+    .portfolio{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .container{
+            grid-template-columns: 1fr !important;
+        }
+    }
+
+    // contact
+    .contact{
+        .contact-con{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .contact-details{
+                // padding-left: 100px;
+            }
+        }
+    }
 }
+
+@media (max-width: 550px){
+    // Home
+    .home{
+        .home-con{
+            .text-con{
+                .heading1{
+                    font-size: 1rem;
+                }
+                .heading2{
+                    font-size: 2rem;
+                }
+                .heading3{
+                    font-size: 0.8rem;
+                }
+                .heading4{
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+
+    // About
+    .about-con{
+        .title-con{
+            .title{
+                font-size: 1.5rem !important;
+            }
+            .line{
+                width: 2.5rem !important;
+            }
+        }
+        .info-con{
+            .info{
+                padding: 1.5rem !important;
+            }
+            .projects{
+                .project{
+                    width: 150px !important;
+                    height: 130px !important;
+                    
+                    .p-title{
+                        font-size: 3rem;
+                    }
+                    .p-info{
+                        font-size: 1rem;
+                    }
+                    
+                }
+            }
+        }
+        .skills-con{
+            .skills{
+                .skill{
+                    .skill-level{
+                        .level{
+                            width: 300px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // portfolio
+    .portfolio{
+        .title-con{
+            .title{
+                font-size: 1.5rem !important;
+            }
+            .line{
+                width: 2.5rem !important;
+            }
+        }
+        .container{
+            gap: 20px;
+            .project-con{
+                width: 300px;
+                height: 300px;
+                padding: 0.3 !important;
+                .link-con{
+                    a{
+                        font-size: 0.5rem;
+                    }
+                    .desc{
+                        font-size: 0.5rem;
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+    
+    // Contact
+    .contact{
+        .title-con{
+            .title{
+                font-size: 1.5rem !important;
+            }
+            .line{
+                width: 2.5rem !important;
+            }
+        }
+        .contact-con{
+            .contact-details{
+                max-width: 300px !important;
+                .title{
+                    font-size: 1rem;
+                }
+                .desc{
+                    font-size: 0.7rem;
+                    margin-top: 1rem;
+                }
+                .container{
+                    p{
+                        align-self: flex-end;
+                        position: absolute;
+                        right: 0;
+                        font-size: 0.6rem;
+                    }
+                    h1{
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+            .contact-form{
+                min-width: none;
+                align-items: center;
+                justify-content: center;
+                .fullName{
+                    flex-direction: column;
+                }
+                .email{
+                    width: 250px !important;
+                }
+                .subject{
+                    width: 250px !important;
+                }
+                .message{
+                    width: 250px !important;
+                }
+            }
+        }
+    }
+}
+
 
 // Independent variables
 

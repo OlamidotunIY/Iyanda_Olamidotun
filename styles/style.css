@@ -75,7 +75,7 @@ header.fixed {
   align-items: center;
   justify-content: center;
   padding: 10rem;
-  background-image: url(/Iyanda_Olamidotun/images/background.jpg);
+  background-image: url(./background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -160,6 +160,7 @@ header.fixed {
 .about-con .info-con .info {
   width: 50%;
   text-transform: capitalize;
+  text-align: justify;
 }
 .about-con .info-con .info .info-title {
   font-size: 2rem;
@@ -278,6 +279,10 @@ header.fixed {
 .portfolio {
   background-color: wheat;
   padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .portfolio .title-con {
   position: relative;
@@ -322,13 +327,14 @@ header.fixed {
 }
 .portfolio .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
+  gap: 50px;
 }
 .portfolio .container .project-con {
   margin-top: 2.5rem;
-  width: 350px;
-  height: 400px;
+  width: 450px;
+  height: 450px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -400,6 +406,7 @@ header.fixed {
   display: flex;
   justify-content: center;
   padding-top: 5rem;
+  gap: 100px;
 }
 .contact .contact-con .contact-details {
   max-width: 500px;
@@ -432,15 +439,37 @@ header.fixed {
   flex-direction: column;
   padding: 0 50px;
 }
-.contact .contact-con .contact-form .name {
-  width: 600px;
-  height: 50px;
+.contact .contact-con .contact-form .fullName {
+  display: flex;
+  gap: 20px;
+}
+.contact .contact-con .contact-form .fullName .firstName {
+  width: 250px;
+  height: 40px;
   border-radius: 30px;
   background-color: rgb(5, 133, 5);
   border: 1px solid black;
   margin-top: 20px;
 }
-.contact .contact-con .contact-form .name input {
+.contact .contact-con .contact-form .fullName .firstName input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 0;
+  padding: 0 20px;
+  outline: none;
+  font-size: 1rem;
+  color: white;
+}
+.contact .contact-con .contact-form .fullName .lastname {
+  width: 250px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: rgb(5, 133, 5);
+  border: 1px solid black;
+  margin-top: 20px;
+}
+.contact .contact-con .contact-form .fullName .lastname input {
   width: 100%;
   height: 100%;
   background-color: transparent;
@@ -451,8 +480,8 @@ header.fixed {
   color: white;
 }
 .contact .contact-con .contact-form .email {
-  width: 600px;
-  height: 50px;
+  width: 520px;
+  height: 40px;
   border-radius: 30px;
   background-color: rgb(5, 133, 5);
   border: 1px solid black;
@@ -469,8 +498,8 @@ header.fixed {
   color: white;
 }
 .contact .contact-con .contact-form .subject {
-  width: 600px;
-  height: 50px;
+  width: 520px;
+  height: 40px;
   border-radius: 30px;
   background-color: rgb(5, 133, 5);
   border: 1px solid black;
@@ -487,8 +516,8 @@ header.fixed {
   color: white;
 }
 .contact .contact-con .contact-form .message {
-  width: 600px;
-  height: 250px;
+  width: 520px;
+  height: 200px;
   border-radius: 20px;
   background-color: rgb(5, 133, 5);
   border: 1px solid black;
@@ -504,6 +533,10 @@ header.fixed {
   font-size: 1rem;
   color: white;
 }
+.contact .contact-con .contact-form .submit-btn {
+  margin-top: 50px;
+  font-size: 1rem;
+}
 
 .footer {
   width: 100%;
@@ -512,14 +545,21 @@ header.fixed {
   border-top-left-radius: 150px;
 }
 
-@media (max-width: 600px) {
-  header .logo-box h1 {
-    font-size: 1rem !important;
+@media (max-width: 1500px) {
+  .about-con {
+    padding: 5rem 5rem !important;
+  }
+  .portfolio .container {
+    grid-template-columns: 1fr 1fr !important;
   }
 }
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   header {
+    width: 100% !important;
     padding: 0 2rem;
+  }
+  header .logo-box h1 {
+    font-size: 1.2rem;
   }
   header .nav-list {
     display: block;
@@ -584,6 +624,153 @@ header.fixed {
   }
   header .extra {
     display: block !important;
+  }
+  .home .home-con .text-con .heading1 {
+    font-size: 1.5rem;
+  }
+  .home .home-con .text-con .heading2 {
+    font-size: 3rem;
+  }
+  .home .home-con .text-con .heading3 {
+    font-size: 1.2rem;
+  }
+  .home .home-con .text-con .heading4 {
+    font-size: 1rem;
+  }
+  .about-con {
+    padding: 5rem 0 !important;
+  }
+  .about-con .info-con {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-con .info-con .info {
+    width: 100%;
+    padding: 5rem !important;
+  }
+  .about-con .projects {
+    padding-left: 0 !important;
+    margin-top: 30px;
+  }
+  .about-con .skills-con .skills {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .portfolio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .portfolio .container {
+    grid-template-columns: 1fr !important;
+  }
+  .contact .contact-con {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 550px) {
+  .home .home-con .text-con .heading1 {
+    font-size: 1rem;
+  }
+  .home .home-con .text-con .heading2 {
+    font-size: 2rem;
+  }
+  .home .home-con .text-con .heading3 {
+    font-size: 0.8rem;
+  }
+  .home .home-con .text-con .heading4 {
+    font-size: 0.8rem;
+  }
+  .about-con .title-con .title {
+    font-size: 1.5rem !important;
+  }
+  .about-con .title-con .line {
+    width: 2.5rem !important;
+  }
+  .about-con .info-con .info {
+    padding: 1.5rem !important;
+  }
+  .about-con .info-con .projects .project {
+    width: 150px !important;
+    height: 130px !important;
+  }
+  .about-con .info-con .projects .project .p-title {
+    font-size: 3rem;
+  }
+  .about-con .info-con .projects .project .p-info {
+    font-size: 1rem;
+  }
+  .about-con .skills-con .skills .skill .skill-level .level {
+    width: 300px !important;
+  }
+  .portfolio .title-con .title {
+    font-size: 1.5rem !important;
+  }
+  .portfolio .title-con .line {
+    width: 2.5rem !important;
+  }
+  .portfolio .container {
+    gap: 20px;
+  }
+  .portfolio .container .project-con {
+    width: 300px;
+    height: 300px;
+    padding: 0.3 !important;
+  }
+  .portfolio .container .project-con .link-con a {
+    font-size: 0.5rem;
+  }
+  .portfolio .container .project-con .link-con .desc {
+    font-size: 0.5rem;
+    margin-top: 5px;
+  }
+  .contact .title-con .title {
+    font-size: 1.5rem !important;
+  }
+  .contact .title-con .line {
+    width: 2.5rem !important;
+  }
+  .contact .contact-con .contact-details {
+    max-width: 300px !important;
+  }
+  .contact .contact-con .contact-details .title {
+    font-size: 1rem;
+  }
+  .contact .contact-con .contact-details .desc {
+    font-size: 0.7rem;
+    margin-top: 1rem;
+  }
+  .contact .contact-con .contact-details .container p {
+    align-self: flex-end;
+    position: absolute;
+    right: 0;
+    font-size: 0.6rem;
+  }
+  .contact .contact-con .contact-details .container h1 {
+    font-size: 0.8rem;
+  }
+  .contact .contact-con .contact-form {
+    min-width: none;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact .contact-con .contact-form .fullName {
+    flex-direction: column;
+  }
+  .contact .contact-con .contact-form .email {
+    width: 250px !important;
+  }
+  .contact .contact-con .contact-form .subject {
+    width: 250px !important;
+  }
+  .contact .contact-con .contact-form .message {
+    width: 250px !important;
   }
 }
 .button {
