@@ -805,7 +805,6 @@ header.fixed {
 }
 @media (max-width: 360px) {
   .home {
-    max-width: 270px !important;
     padding: 0 !important;
   }
   .home .home-con .text-con .heading1 {

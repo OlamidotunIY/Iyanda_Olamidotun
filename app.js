@@ -161,12 +161,7 @@ function displayProjects(projects){
     })
     displayProjects = displayProjects.join('')
     container.innerHTML = displayProjects;
-    if(projects.lenght > 8){
-        console.log('this is more than 8');
-    }
-    else{
-        console.log('this is not more than 8')
-    }
+  
 }
 
 function displayMenuBtn(){
@@ -204,4 +199,3 @@ function displayMenuBtn(){
 
 
 }
-
