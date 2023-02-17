@@ -536,11 +536,12 @@ header.fixed {
 .contact .contact-con .contact-form .submit-btn {
   margin-top: 50px;
   font-size: 1rem;
+  border-radius: 10px;
 }
 
 .footer {
   width: 100%;
-  height: 250px;
+  height: 150px;
   background-color: black;
   border-top-left-radius: 150px;
 }
@@ -565,7 +566,7 @@ header.fixed {
     display: block;
     position: fixed;
     top: -1000%;
-    width: 50%;
+    width: 70%;
     background-color: black;
     height: 100vh;
     left: 0;
@@ -598,13 +599,17 @@ header.fixed {
   header #closeBtn.active {
     display: block !important;
     position: absolute;
-    left: 40%;
+    left: 60%;
     color: white;
     cursor: pointer;
+    font-size: 1.5rem;
   }
   header .menuBtn {
     display: block !important;
     transition: all 0.4s ease-in-out;
+    font-size: 1.5rem;
+    color: black;
+    cursor: pointer;
   }
   header .menuBtn.active {
     display: none !important;
@@ -675,6 +680,12 @@ header.fixed {
   }
 }
 @media (max-width: 550px) {
+  header.fixed {
+    position: fixed;
+    z-index: 999;
+    background-color: whitesmoke;
+    max-width: 100%;
+  }
   .home .home-con .text-con .heading1 {
     font-size: 1rem;
   }
@@ -686,6 +697,17 @@ header.fixed {
   }
   .home .home-con .text-con .heading4 {
     font-size: 0.8rem;
+    line-height: 20px;
+  }
+  .home .home-con .social-icon {
+    font-size: 1rem;
+    gap: 10px !important;
+  }
+  .home .home-con .social-icon a {
+    padding: 5px;
+  }
+  .about-con {
+    width: 100% !important;
   }
   .about-con .title-con .title {
     font-size: 1.5rem !important;
@@ -709,6 +731,9 @@ header.fixed {
   .about-con .skills-con .skills .skill .skill-level .level {
     width: 300px !important;
   }
+  .portfolio {
+    width: 100% !important;
+  }
   .portfolio .title-con .title {
     font-size: 1.5rem !important;
   }
@@ -729,6 +754,9 @@ header.fixed {
   .portfolio .container .project-con .link-con .desc {
     font-size: 0.5rem;
     margin-top: 5px;
+  }
+  .contact {
+    width: 100% !important;
   }
   .contact .title-con .title {
     font-size: 1.5rem !important;
@@ -756,9 +784,139 @@ header.fixed {
     font-size: 0.8rem;
   }
   .contact .contact-con .contact-form {
-    min-width: none;
+    min-width: 0 !important;
     align-items: center;
     justify-content: center;
+    padding: 0 !important;
+  }
+  .contact .contact-con .contact-form .fullName {
+    flex-direction: column;
+    gap: 0 !important;
+  }
+  .contact .contact-con .contact-form .email {
+    width: 250px !important;
+  }
+  .contact .contact-con .contact-form .subject {
+    width: 250px !important;
+  }
+  .contact .contact-con .contact-form .message {
+    width: 250px !important;
+  }
+}
+@media (max-width: 360px) {
+  .home {
+    max-width: 270px !important;
+    padding: 0 !important;
+  }
+  .home .home-con .text-con .heading1 {
+    font-size: 0.8rem;
+  }
+  .home .home-con .text-con .heading2 {
+    font-size: 1.6rem;
+  }
+  .home .home-con .text-con .heading3 {
+    font-size: 0.6rem;
+  }
+  .home .home-con .text-con .heading4 {
+    font-size: 0.5rem;
+    line-height: 20px;
+  }
+  .about-con {
+    width: 100% !important;
+  }
+  .about-con .title-con .title {
+    font-size: 1.3rem !important;
+  }
+  .about-con .title-con .line {
+    width: 2.2rem !important;
+  }
+  .about-con .info-con .info {
+    padding: 1.5rem !important;
+  }
+  .about-con .info-con .info .info-title {
+    font-size: 1.2rem;
+  }
+  .about-con .info-con .info .info-desc {
+    font-size: 0.7rem;
+  }
+  .about-con .info-con .projects .project {
+    width: 100px !important;
+    height: 80px !important;
+  }
+  .about-con .info-con .projects .project .p-title {
+    font-size: 2rem;
+  }
+  .about-con .info-con .projects .project .p-info {
+    font-size: 0.8rem;
+  }
+  .about-con .skills-con .skills .skill .skill-level .level {
+    width: 200px !important;
+  }
+  .portfolio {
+    width: 100% !important;
+  }
+  .portfolio .title-con .title {
+    font-size: 1.3rem !important;
+  }
+  .portfolio .title-con .line {
+    width: 2.2rem !important;
+  }
+  .portfolio .btn-container {
+    gap: 15px;
+  }
+  .portfolio .btn-container .filter-btn {
+    height: 2rem;
+    padding: 0 10px;
+    font-size: 10px !important;
+  }
+  .portfolio .container {
+    gap: 20px;
+  }
+  .portfolio .container .project-con {
+    width: 250px;
+    height: 250px;
+    padding: 0.3 !important;
+  }
+  .portfolio .container .project-con .link-con a {
+    font-size: 0.4rem;
+  }
+  .portfolio .container .project-con .link-con .desc {
+    font-size: 0.4rem;
+    margin-top: 5px;
+  }
+  .contact {
+    width: 100% !important;
+  }
+  .contact .title-con .title {
+    font-size: 1.3rem !important;
+  }
+  .contact .title-con .line {
+    width: 2.2rem !important;
+  }
+  .contact .contact-con .contact-details {
+    max-width: 250px !important;
+  }
+  .contact .contact-con .contact-details .title {
+    font-size: 0.8rem;
+  }
+  .contact .contact-con .contact-details .desc {
+    font-size: 0.5rem;
+    margin-top: 1rem;
+  }
+  .contact .contact-con .contact-details .container p {
+    align-self: flex-end;
+    position: absolute;
+    right: 0;
+    font-size: 0.4rem;
+  }
+  .contact .contact-con .contact-details .container h1 {
+    font-size: 0.7rem;
+  }
+  .contact .contact-con .contact-form {
+    min-width: 0 !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
   }
   .contact .contact-con .contact-form .fullName {
     flex-direction: column;
