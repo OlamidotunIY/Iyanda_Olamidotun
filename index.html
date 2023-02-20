@@ -72,8 +72,10 @@
         <div class="info-con">
             <div class="info">
                 <h1 class="info-title">information about me</h1>
-                <p class="info-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum commodi consectetur exercitationem eius debitis, soluta hic quam ducimus. Ab vitae odit cum dolores dolor illum rerum. Maxime hic similique incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum commodi consectetur exercitationem eius debitis, soluta hic quam ducimus. Ab vitae odit cum dolores dolor illum rerum. Maxime hic similique incidunt!</p>
-                <p class="info-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum commodi consectetur exercitationem eius debitis, soluta hic quam ducimus. Ab vitae odit cum dolores dolor illum rerum. Maxime hic similique incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum commodi consectetur exercitationem eius debitis, soluta hic quam ducimus. Ab vitae odit cum dolores dolor illum rerum. Maxime hic similique incidunt!</p>
+                <p class="info-desc">Welcome to my portfolio website. My name is <strong>IYANDA OLAMIDOTUN KOLAPO</strong>, and I am an undergraduate student at the University of Agriculture Abeokuta, studying statistics. I am currently in my final year, and I am passionate about using data to derive insights that can be used to solve real-world problems.</p>
+                <p class="info-desc">As a data analyst, I have experience using SPSS, R, and Excel to analyze data and generate actionable insights. My ability to manipulate and analyze data has enabled me to develop a deep understanding of statistical concepts, which I leverage to provide accurate and insightful analysis.</p>
+                <p class="info-desc">I am also currently enrolled in the ALX Software Engineering program, where I am expanding my skillset to include web development. I am proficient in HTML, CSS, JavaScript, Bootstrap, and SASS, and I am continuously learning and exploring new technologies to stay up-to-date with the latest trends and developments in the field.</p>
+                <p class="info-desc">Thank you for visiting my website, and I hope that you find my work and experience valuable. Please feel free to contact me if you have any questions or would like to discuss a potential project.</p>
                 <div class="btn-con button">
                     <button type="button" class="btn"> <a href="#" class="btn-link">Download CV</a></button>
                 </div>
@@ -171,6 +173,9 @@
         <div class="container">
             
         </div>
+
+        <i class="fa-solid fa-arrow-down more-btn"></i>
+        <i class="fa-solid fa-arrow-up hide-project hide-btn"></i>
         
     </section>
 
@@ -184,7 +189,7 @@
         <div class="contact-con">
             <div class="contact-details">
                <h1 class="title">Contact me here</h1>
-               <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt cupiditate quaerat consequuntur reiciendis quibusdam minima iusto atque corrupti consequatur necessitatibus!</p>
+               <p class="desc">Thank you for visiting my portfolio website. If you have any questions, feedback, or would like to discuss a potential project, please don't hesitate to reach out to me. I would love to hear from you and collaborate on projects that leverage my skills and expertise. You can reach me via email, phone, or by filling out the contact form below. I look forward to hearing from you and working together to achieve your goals.</p>
                <div class="container">
                     <i class="fa-solid fa-location-dot"></i>
                     <h1 class="location-title">Location</h1>
@@ -212,25 +217,33 @@
                </div>
             </div>
             <div class="contact-form">
-                <form action="submit">
+                <form action="submit" id="contact-form">
                     <div class="fullName">
                         <div class="firstName">
-                            <input type="text" placeholder="First name">
+                            <input type="text" name="firstName" id="firstName" required>
+                            <h1 class="label">First Name</h1>
                         </div>
                         <div class="lastname">
-                            <input type="text" placeholder="Last Name">
+                            <input type="text" name="lastName" id="lastName" required>
+                            <h1 class="label">Last Name</h1>
                         </div>
                     </div>
                     <div class="email">
-                        <input type="email" name="" id="" placeholder="YOUR EMAIL">
+                        <input type="email" name="email" id="email" required>
+                        <h1 class="label">Email</h1>
                     </div>
                     <div class="subject">
-                        <input type="text" placeholder="Enter Subject Here">
+                        <input type="text" name="project-name" id="project-name" required>
+                        <h1 class="label">Project</h1>
                     </div>
                     <div class="message">
-                        <input type="textarea">
+                        <textarea type="textarea" name="project-desc" id="project-desc" ></textarea>
+                        <h1 class="label">Project Description</h1>
                     </div>
+
+                    <p class="prompt" id="alart"></p>
                     <button class="submit-btn btn-con" type="submit">Submit</button>
+
                 </form>
             </div>
         </div>
@@ -239,11 +252,24 @@
     <!-- Footer section -->
 
     <section class="footer">
+        <div class="social-icon">
+            <a href=""><i class="fa-brands fa-github"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-slack"></i></a>
+            <a href=""><i class="fa-brands fa-telegram"></i></a>
+            <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+         </div>
+         <div class="copyright">
+            <p> © copyright <span>Iyanda Olamidotun kolapo</span>, All right reserved</p>
+         </div>
 
     </section>
     <script src="app.js"></script>
+
+    <button class="back-to-top-btn" id="back-to-top-btn"> <i class="fa-solid fa-arrow-up"></i></button>
+
+    <!-- Email Js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </body>
 </html>
-
-<!-- <i class="fa-solid fa-arrow-down"></i>
-<i class="fa-solid fa-arrow-up"></i> -->

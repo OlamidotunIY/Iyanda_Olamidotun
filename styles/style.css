@@ -283,6 +283,8 @@ header.fixed {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+  padding-bottom: 10rem;
 }
 .portfolio .title-con {
   position: relative;
@@ -342,7 +344,7 @@ header.fixed {
 }
 .portfolio .container .project-con img {
   width: 100%;
-  height: 70%;
+  height: 80%;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   cursor: pointer;
@@ -352,13 +354,17 @@ header.fixed {
   transform: scale(1.15);
 }
 .portfolio .container .project-con .link-con {
-  height: 30%;
+  height: 20%;
   background-color: black;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   padding: 0.8rem;
   position: relative;
   border-top: 5px solid rgb(5, 133, 5);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease-in-out;
 }
 .portfolio .container .project-con .link-con a {
   font-size: 0.8rem;
@@ -366,18 +372,26 @@ header.fixed {
   text-decoration: none;
   text-transform: capitalize;
 }
-.portfolio .container .project-con .link-con .desc {
-  font-size: 0.8rem;
-  color: white;
-  margin-top: 10px;
-  text-transform: capitalize;
+.portfolio .container .project-con .link-con i {
+  color: rgb(5, 133, 5);
+  font-size: 1rem;
 }
-.portfolio .container .project-con .link-con .github-link {
+.portfolio .container .project-con .link-con:hover {
+  gap: 20px;
+}
+.portfolio .more-btn {
+  font-size: 3rem;
   position: absolute;
-  font-size: 0.8rem;
-  color: white;
-  bottom: 10px;
-  text-transform: capitalize;
+  bottom: 0;
+  cursor: pointer;
+  animation: arrow-up-down 1s ease-in-out infinite;
+}
+.portfolio .hide-btn {
+  font-size: 3rem;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+  animation: arrow-up-down 1s ease-in-out infinite;
 }
 
 .contact {
@@ -438,6 +452,7 @@ header.fixed {
   display: flex;
   flex-direction: column;
   padding: 0 50px;
+  position: relative;
 }
 .contact .contact-con .contact-form .fullName {
   display: flex;
@@ -447,9 +462,10 @@ header.fixed {
   width: 250px;
   height: 40px;
   border-radius: 30px;
-  background-color: rgb(5, 133, 5);
-  border: 1px solid black;
+  background-color: white;
+  border: 1px solid rgb(5, 133, 5);
   margin-top: 20px;
+  position: relative;
 }
 .contact .contact-con .contact-form .fullName .firstName input {
   width: 100%;
@@ -458,16 +474,26 @@ header.fixed {
   border: 0;
   padding: 0 20px;
   outline: none;
-  font-size: 1rem;
-  color: white;
+  font-size: 0.8rem;
+  color: black;
+  border-radius: 30px;
+}
+.contact .contact-con .contact-form .fullName .firstName .label {
+  position: absolute;
+  font-size: 15px;
+  top: -7px;
+  left: 20px;
+  background-color: inherit;
+  padding: 0 5px;
 }
 .contact .contact-con .contact-form .fullName .lastname {
   width: 250px;
   height: 40px;
   border-radius: 30px;
-  background-color: rgb(5, 133, 5);
-  border: 1px solid black;
+  background-color: white;
+  border: 1px solid rgb(5, 133, 5);
   margin-top: 20px;
+  position: relative;
 }
 .contact .contact-con .contact-form .fullName .lastname input {
   width: 100%;
@@ -476,16 +502,26 @@ header.fixed {
   border: 0;
   padding: 0 20px;
   outline: none;
-  font-size: 1rem;
-  color: white;
+  font-size: 0.8rem;
+  color: black;
+  border-radius: 30px;
+}
+.contact .contact-con .contact-form .fullName .lastname .label {
+  position: absolute;
+  font-size: 15px;
+  top: -7px;
+  left: 20px;
+  background-color: inherit;
+  padding: 0 5px;
 }
 .contact .contact-con .contact-form .email {
   width: 520px;
   height: 40px;
   border-radius: 30px;
-  background-color: rgb(5, 133, 5);
-  border: 1px solid black;
+  background-color: white;
+  border: 1px solid rgb(5, 133, 5);
   margin-top: 20px;
+  position: relative;
 }
 .contact .contact-con .contact-form .email input {
   width: 100%;
@@ -494,16 +530,26 @@ header.fixed {
   border: 0;
   padding: 0 20px;
   outline: none;
-  font-size: 1rem;
-  color: white;
+  font-size: 0.8rem;
+  color: black;
+  border-radius: 30px;
+}
+.contact .contact-con .contact-form .email .label {
+  position: absolute;
+  font-size: 15px;
+  top: -7px;
+  left: 20px;
+  background-color: inherit;
+  padding: 0 5px;
 }
 .contact .contact-con .contact-form .subject {
   width: 520px;
   height: 40px;
   border-radius: 30px;
-  background-color: rgb(5, 133, 5);
-  border: 1px solid black;
+  background-color: white;
+  border: 1px solid rgb(5, 133, 5);
   margin-top: 20px;
+  position: relative;
 }
 .contact .contact-con .contact-form .subject input {
   width: 100%;
@@ -512,38 +558,120 @@ header.fixed {
   border: 0;
   padding: 0 20px;
   outline: none;
-  font-size: 1rem;
-  color: white;
+  font-size: 0.8rem;
+  color: black;
+  border-radius: 30px;
+}
+.contact .contact-con .contact-form .subject .label {
+  position: absolute;
+  font-size: 15px;
+  top: -7px;
+  left: 20px;
+  background-color: inherit;
+  padding: 0 5px;
 }
 .contact .contact-con .contact-form .message {
   width: 520px;
   height: 200px;
   border-radius: 20px;
-  background-color: rgb(5, 133, 5);
-  border: 1px solid black;
+  background-color: white;
+  border: 1px solid rgb(5, 133, 5);
   margin-top: 20px;
+  position: relative;
 }
-.contact .contact-con .contact-form .message input {
+.contact .contact-con .contact-form .message textarea {
   width: 100%;
-  height: 250px;
+  height: 100%;
   background-color: transparent;
   border: 0;
-  padding: 0 20px;
+  padding: 20px;
   outline: none;
-  font-size: 1rem;
-  color: white;
+  font-size: 1.2rem;
+  color: black;
+  resize: none;
+  border-radius: 20px;
+}
+.contact .contact-con .contact-form .message .label {
+  position: absolute;
+  font-size: 15px;
+  top: -7px;
+  left: 20px;
+  background-color: inherit;
+  padding: 0 5px;
 }
 .contact .contact-con .contact-form .submit-btn {
   margin-top: 50px;
   font-size: 1rem;
-  border-radius: 10px;
+  border-radius: 3px;
+  border: 0;
+}
+.contact .contact-con .contact-form .submit-btn:hover {
+  border: 1px solid rgb(5, 133, 5);
+}
+.contact .contact-con .contact-form .prompt {
+  position: absolute;
+  bottom: 3.5rem;
+  left: 5rem;
 }
 
 .footer {
   width: 100%;
-  height: 150px;
+  height: auto;
   background-color: black;
   border-top-left-radius: 150px;
+  padding: 5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.footer .social-icon {
+  font-size: 2rem;
+}
+.footer .social-icon a {
+  color: white;
+  margin-left: 30px;
+  transition: all 0.4s ease-in;
+}
+.footer .social-icon a:hover {
+  color: rgb(5, 133, 5);
+}
+.footer .copyright {
+  border-top: 1px solid white;
+  width: 70%;
+  text-align: center;
+}
+.footer .copyright p {
+  font-size: 1.5rem;
+  color: white;
+  text-transform: capitalize;
+  padding-top: 20px;
+}
+.footer .copyright p span {
+  text-transform: uppercase;
+  color: rgb(5, 133, 5);
+}
+
+.back-to-top-btn {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  right: 1rem;
+  bottom: 2rem;
+  z-index: 999;
+  background-color: rgb(5, 133, 5);
+  border-radius: 3px;
+  text-align: center;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 0;
+}
+.back-to-top-btn i {
+  font-size: 1.5rem;
+  color: white;
 }
 
 @media (max-width: 1500px) {
@@ -733,6 +861,7 @@ header.fixed {
   }
   .portfolio {
     width: 100% !important;
+    padding-bottom: 3rem;
   }
   .portfolio .title-con .title {
     font-size: 1.5rem !important;
@@ -754,6 +883,12 @@ header.fixed {
   .portfolio .container .project-con .link-con .desc {
     font-size: 0.5rem;
     margin-top: 5px;
+  }
+  .portfolio .more-btn {
+    font-size: 1.5rem;
+  }
+  .portfolio .hide-btn {
+    font-size: 1.5rem;
   }
   .contact {
     width: 100% !important;
@@ -802,6 +937,12 @@ header.fixed {
   .contact .contact-con .contact-form .message {
     width: 250px !important;
   }
+  .footer .social-icon {
+    font-size: 1.2rem;
+  }
+  .footer .copyright p {
+    font-size: 1.2rem;
+  }
 }
 @media (max-width: 360px) {
   .home {
@@ -828,6 +969,9 @@ header.fixed {
   }
   .about-con .title-con .line {
     width: 2.2rem !important;
+  }
+  .about-con .info-con {
+    padding-top: 2.5rem;
   }
   .about-con .info-con .info {
     padding: 1.5rem !important;
@@ -909,7 +1053,7 @@ header.fixed {
     font-size: 0.4rem;
   }
   .contact .contact-con .contact-details .container h1 {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
   .contact .contact-con .contact-form {
     min-width: 0 !important;
@@ -966,4 +1110,28 @@ header.fixed {
   height: 100%;
   width: 10rem;
   transition: all 0.3s ease-in-out;
+}
+
+.color-red {
+  color: rgb(230, 13, 13);
+}
+
+.color-green {
+  color: rgb(5, 133, 5);
+}
+
+.hide-project {
+  display: none !important;
+}
+
+@keyframes arrow-up-down {
+  0% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-5px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
 }/*# sourceMappingURL=style.css.map */
