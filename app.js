@@ -60,7 +60,7 @@ const projects = [
         category: "JavaScript",
         title: "Reviews Project",
         img: "./images/reviews.JPG",
-        liveLink: "",
+        liveLink: "https://glowing-mandazi-d5288e.netlify.app/",
     },
     {
         id: 10,
@@ -145,7 +145,7 @@ function displayProjects(projects){
         return  `<div class="project-con">
                     <img src=${project.img} alt=${project.title}>
                     <div class="link-con">
-                        <a href=${project.liveLink} class="live-link"><h1>${project.title}</h1></a>
+                        <a href="${project.liveLink}" target="_blank" class="live-link"><h1>${project.title}</h1></a>
                         <i class="fa-solid fa-arrow-right"></i>
                     </div>
                 </div>`;
